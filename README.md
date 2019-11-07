@@ -33,8 +33,8 @@ Things you may want to cover:
   |username|string|null:false,add_index :username, unique: true|
 ### Association
   - has_many :messages
-  - has_many :groups
-  - has_many :groups, through: :groups_users
+  - has_many :group
+  - has_many :group, through: :group_users
 
 ## messagesテーブル
   |Column|Type|Options|
@@ -45,23 +45,23 @@ Things you may want to cover:
   |groups_id|integer|null:false,foreign_key:true|
 ### Association
   - belongs_to :user
-  - belongs_to :groups
+  - belongs_to :group
 
-## groupsテーブル
+## groupテーブル
   |Column|Type|Options|
   |------|----|-------|
-  |title|text|null:false|
-  |groupsname|null:false,add_index :groupsname, unique: true|
+  |name|null:false,add_index :name, unique: true|
 ### Association
   - has_many :messages
-  - has_many :groups_users
+  - has_many :group_users
+  - has_many :users, through: :group_users
 
-## groups_usersテーブル
+## group_usersテーブル
   |Column|Type|Options|
   |------|----|-------|
   |user_id|integer|null:false,foreign_key:true|
   |groups_id|integer|null:false,foreign_key:true|
 ### Association
   - belongs_to :users
-  - belongs_to :groups
+  - belongs_to :group
 
