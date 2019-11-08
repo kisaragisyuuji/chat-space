@@ -30,10 +30,11 @@ Things you may want to cover:
   |------|----|-------|
   |email|string|null:false,add_index :email, unique: true|
   |password|string|null:false,add_index :password, unique: true|
-  |username|string|null:false,add_index :username, unique: true|
+  |name|string|null:false,add_index :name, unique: true|
 ### Association
   - has_many :messages
   - has_many :groups, through: :groups_users
+  - has_many :groups_users
 
 ## messagesテーブル
   |Column|Type|Options|
