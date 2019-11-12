@@ -2,8 +2,6 @@
   width: 300px;
   color: white;
   float: left;
-  
-
 
 .header {
   background-color: #253141;
@@ -13,20 +11,14 @@
   padding: 0 20px 0 20px;
   justify-content: space-between;
   
-  
-  
-
     &__logo {
       display: flex;      
       font-size: 16px;
       font-weight: bold;
       width: 100%;
-
     }
-
     
     &__btn {
-        
         display: flex;
         margin-left: 0.3rem;
         color: white;
@@ -36,34 +28,25 @@
         margin-left: 0.3rem;
         color: white;
         }
-      
-    
-     
   }
   
-
 .contents {
-  
   background-color: #2f3e51;
   padding: 20px 20px 0 20px;
   height: calc( 100vh - 120px ); 
   overflow: scroll; 
+
   &__group {
-
-  
   margin-bottom: 40px; 
-
 
     &__name { 
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 5px; 
-
     }
 
     &__name2 {
     font-size: 11px;
-    
     }
   }
 
@@ -77,11 +60,7 @@
 
     &__text_name2 {
     font-size: 15px;
-
       }
     }
   }
-
-
-
 }

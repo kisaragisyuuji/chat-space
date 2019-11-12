@@ -42,7 +42,6 @@
           font-size: 16px;
           font-weight: bold;
           color: rgb(67, 81, 100);
-        // display: flex;
         }
         .textime {
           font-size: 14px;
@@ -51,7 +50,6 @@
       }
     } 
     .textdate {
-      //display: block!important;
       color: #434A54;
       font-size: 14px;
       margin-bottom: 10px;
@@ -59,7 +57,6 @@
   }
   .form{
     height: 50px;
-    //width: calc( 100vw - 300px );
     padding: 20px 40px;
     background-color: #ddd;
     .newmessage {
@@ -86,9 +83,7 @@
             position: absolute;
             margin-right: 40px;
             cursor: pointer;
-            
           }
-
           
         }
       .submit {
