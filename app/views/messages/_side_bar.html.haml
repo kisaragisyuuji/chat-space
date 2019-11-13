@@ -1,11 +1,11 @@
 .sidechat
   .header
     .header__logo
-      ユーザーネーム
+      = current_user.name
     = link_to '#', class: "header__btn" do
       %i.fa.fa-edit
       %span<>
-    = link_to '#', class: "header__cogbtn" do
+    = link_to edit_user_path(current_user), class: "header__cogbtn" do
       %i.fa.fa-cog
       %span<>  
   .contents
