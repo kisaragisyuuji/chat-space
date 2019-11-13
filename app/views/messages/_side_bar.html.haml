@@ -2,7 +2,7 @@
   .header
     .header__logo
       = current_user.name
-    = link_to '#', class: "header__btn" do
+    = link_to new_group_path, class: "header__btn" do
       %i.fa.fa-edit
       %span<>
     = link_to edit_user_path(current_user), class: "header__cogbtn" do
