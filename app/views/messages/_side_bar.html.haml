@@ -9,17 +9,11 @@
       %i.fa.fa-cog
       %span<>  
   .contents
-    .contents__group
-      .contens__group__name
-        グループ1
-      .contens__group__name2
-        テスト
-    .contents__group2
-      .contents__group2__text_name
-        グループ２
-      .contents__group__text_name2
-        テスト
-
-
-
-
+    - current_user.groups.each do |contents__group|
+      .contents__group
+        = link_to group_messages_path(contents__group) do
+          .contents__group__name
+            = contents__group.name
+          .contents__group__name2
+            まだメッセージがありません
+            
