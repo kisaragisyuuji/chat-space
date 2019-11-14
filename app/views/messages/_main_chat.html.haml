@@ -19,11 +19,15 @@
       仮置き
   .form
     .newmessage
-      .inputbox
-        .input
-          type a message
-        .img
-          = icon('fas', 'image')
-          %input{type: "file", class: "inputbox__image"}
-      .submit
-        Send
+      = form_for [@group, @message] do |f|
+        .inputbox
+          .input
+            = f.text_field :content, placeholder: 'type a message'
+          .img
+            = f.label :image do
+              = icon('fas', 'image')
+              = f.file_field :image, class: 'inputbox__image'
+          -# = icon('fas', 'image')
+          -# %input{type: "file", class: "inputbox__image"}
+        .submit
+          = f.submit 'Send'
