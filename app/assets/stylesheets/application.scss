@@ -1,5 +1,6 @@
 
 @import "./reset";
+@import "vendor_prefix";
 @import "font-awesome-sprockets";
 @import "./font-awesome";
 @import "./side_bar";
@@ -8,3 +9,7 @@
 @import "colors";
 @import "flash";
 @import "group";
+
+.wrapper{
+  @include flexbox;
+}
