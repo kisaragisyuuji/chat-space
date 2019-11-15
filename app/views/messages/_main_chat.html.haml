@@ -2,32 +2,32 @@
   .mainheader
     .leftbox
       .groupname
-        test
+        //test
       .membername
-        Member: zero
+        //Member: zero
     .editbtn
       = link_to edit_user_path(current_user) do
         Edit 
   .mainmessage
+    = render partial: 'messages', collection: @messages
     .mainmessage__box
       .textgroup
         .username
-          Syouya
+          
         .textimg
-          2019/10/08/19:14:39
+          
     .textdate
-      仮置き
+      
   .form
     .newmessage
+      
       = form_for [@group, @message] do |f|
         .inputbox
           .input
             = f.text_field :content, placeholder: 'type a message'
           .img
             = f.label :image do
-              = icon('fas', 'image')
+              = icon('fas', 'img')
               = f.file_field :image, class: 'inputbox__image'
-          -# = icon('fas', 'image')
-          -# %input{type: "file", class: "inputbox__image"}
         .submit
           = f.submit 'Send'

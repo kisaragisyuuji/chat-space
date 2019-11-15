@@ -1,5 +1,7 @@
 class GroupsController < ApplicationController
+  # before_action :set_group
   def index
+    # = @group.show_last_message
   end 
    
   def new
