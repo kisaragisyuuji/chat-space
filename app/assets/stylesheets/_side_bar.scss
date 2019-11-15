@@ -5,10 +5,10 @@
 
 .header {
   background-color: #253141;
-  height: 100px;
+  height: 80px;
   display: flex;
   align-items: center;
-  padding: 0 20px 0 20px;
+  padding: 0 20px;
   justify-content: space-between;
   
     &__logo {
@@ -32,21 +32,24 @@
   
 .contents {
   background-color: #2f3e51;
-  padding: 20px 20px 0 20px;
-  height: calc( 100vh - 120px ); 
+  padding: 20px 20px 0;
+  height: calc( 100vh - 100px ); //120
   overflow: scroll; 
-
+  
   &__group {
   margin-bottom: 40px; 
+  
 
     &__name { 
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 5px; 
+    color: white;
     }
 
     &__name2 {
     font-size: 11px;
+    color: white;
       }
     }
   }

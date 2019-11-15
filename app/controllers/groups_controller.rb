@@ -1,7 +1,6 @@
 class GroupsController < ApplicationController
-  # before_action :set_group
+  before_action :set_group, only: [:edit, :update]
   def index
-    # = @group.show_last_message
   end 
    
   def new
@@ -26,7 +25,8 @@ class GroupsController < ApplicationController
       redirect_to group_messages_path(@group), notice: 'グループを編集しました'
     else
       render :edit
-    end 
+    end
+  end   
 
   private
   def group_params
@@ -35,6 +35,6 @@ class GroupsController < ApplicationController
   
   def set_group
     @group = Group.find(params[:id])
-    end  
-  end
+  end  
+  
 end
