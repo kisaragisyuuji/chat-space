@@ -10,12 +10,13 @@
       = link_to edit_group_path(current_user) do
         Edit 
   .mainmessage
-    = render partial: 'messages', collection: @messages
-    .mainmessage__box
-      .textgroup
-        .username
-        .textimg
-    .textdate
+    .boxzero
+      = render partial: 'messages', collection: @messages
+      .mainmessage__box
+        .textgroup
+          .username
+          .textimg
+      .textdate
       
   .form
     .newmessage
