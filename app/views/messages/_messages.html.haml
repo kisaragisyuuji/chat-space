@@ -1,4 +1,4 @@
-.massage
+.message{"data-message-id": "#{messages.id}"}
   .upper-message
     .upper-message__user-name
       = messages.user.name
@@ -9,3 +9,4 @@
       %p.lower-message__content
         = messages.content
     = image_tag messages.image.url, class: 'lower-message__image' if messages.image.present?
+
