@@ -3,18 +3,22 @@ $(function(){
         var messageImage = (message.image !== null) ? `<img class ="image_size", src="${message.image}">` : ""
          
         var html = `<div class="message" data-message-id="${message.id}">
-          <p class = "upper-user-name">
-            ${message.user_name}
-          </p>
-          <p class = "created-at">
-            ${message.date}
-          </p>
-          <p class = "upper-content">
-            ${message.content}
-          </p>
-          <p class = "user-image">
-            ${messageImage}
-          </p>
+          <div class ="upper-message">
+            <div class = "upper-message__user-name">
+              ${message.user_name}
+            </div>
+            <div class = "upper-message__date">
+              ${message.date}
+            </div>
+          </div>
+          <div class = "lower-message">
+            <div class = "lower-message__content">
+              ${message.content}
+            </div>
+            <div class = "lower-message__image">
+              ${messageImage}
+            </div>
+          </div>
         </div>`
         return html;
     }
