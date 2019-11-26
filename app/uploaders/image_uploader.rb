@@ -24,6 +24,6 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # 変換したファイルのファイル名の規則
   def filename
-    "#{Time.zone.now.strftime('%Y%m%d%H%M%S')}.jpg" if original_filename.present?
+    "#{Time.zone.now.strftime('%Y/%m/%d(%a) %H:%M:%S')}.jpg" if original_filename.present?
   end
 end
