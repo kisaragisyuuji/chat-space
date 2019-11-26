@@ -8,6 +8,7 @@
 @import "colors";
 @import "flash";
 @import "group";
+@import "message";
 
 .wrapper{
   @include flexbox;

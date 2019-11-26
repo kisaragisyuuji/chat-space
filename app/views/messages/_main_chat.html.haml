@@ -8,7 +8,8 @@
           = n.name
     .editbtn
       = link_to edit_group_path(current_user) do
-        Edit 
+        .Edit
+          Edit 
   .mainmessage
     .boxzero
       = render partial: 'messages', collection: @messages
@@ -22,8 +23,7 @@
     .newmessage
       = form_for [@group, @message] do |f|
         .inputbox
-          .input
-            = f.text_field :content, placeholder: 'type a message'
+          = f.text_field :content, class:'input', placeholder: 'type a message'
           .img
             = f.label :image do
               %i.fa.fa-image
