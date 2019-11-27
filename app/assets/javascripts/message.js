@@ -49,7 +49,8 @@ $(function(){
   })
     var reloadMessages = function() {
       if (window.location.href.match(/\/groups\/\d+\/messages/)){
-      last_message_id = $('.message:last').data("message-id");
+        var last_message_id = $('.message:last').data("message-id");
+        console.log(last_message_id);
       $.ajax({
         url : "api/messages",
         type: "GET",
@@ -59,16 +60,19 @@ $(function(){
       .done(function(messages) {
         var insertHTML = '';
           messages.forEach(function (message){
-          insertHTML = buildHTML(message);
-          $('.mainmessage').append(insertHTML);
-          })
-          $('.mainmessage').animate({scrollTop: $('.mainmessage')[0].scrollHeight}, 'fast');
+            insertHTML = buildHTML(message);
+            $('.mainmessage').append(insertHTML);
+            $('.mainmessage').animate({scrollTop: $('.mainmessage')[0].scrollHeight}, 'fast');
+          console.log("成功");
+        })
       })
       .fail(function() {
         alert('自動更新に失敗しました');
+        console.log("失敗");
       });
     }
+
   };
-  setInterval(reloadMessages, 7000); 
-  
+setInterval(reloadMessages, 7000);
+console.log("７秒");
 });
